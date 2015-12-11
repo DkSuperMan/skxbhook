@@ -1,0 +1,7 @@
+{
+	Filter = {
+		Bundles = (
+			"com.b2015dma.26",
+		);
+	};
+}
