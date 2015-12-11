@@ -56,7 +56,7 @@
 - (BOOL)openURL:(NSURL*)url
 {
 	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"UIApplication" message:url.absoluteString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-
+	[alertView show];
 	return %orig;
 }
 
