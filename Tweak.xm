@@ -14,6 +14,16 @@
 	return NO;
 }
 
+- (void)notificationHandler:(id)arg1
+{
+
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController webView" message:@"notificationHandler" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    NSLog(@"notificationHandler is %@ callback symbol is %@",arg1,[NSThread callStackSymbols]);
+	return %orig;
+	
+}
+
 - (void)OpenScheme:(id)arg1
 {
 	NSLog(@"OpenScheme arg1 is %@",arg1);
@@ -23,24 +33,23 @@
 	return %orig;
 }
 
-%end
-
-/*
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
 
     NSString* url = request.mainDocumentURL.absoluteString;
+
+    /*
 	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController webView" message:url delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
-
+    */
     NSLog(@"webView url is %@",url);
-
-    
 
     return %orig;
 }
 
 %end
+
+/*
 
 %hook AppDelegate
 
