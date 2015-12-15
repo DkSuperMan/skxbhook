@@ -47,6 +47,54 @@
     return %orig;
 }
 
+- (void)verifyUser:(id)arg1
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController" message:@"verifyUser" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    NSLog(@"verifyUser arg1 is %@",arg1);
+    return %orig;
+}
+
+- (id)postJson:(id)arg1 url:(id)arg2
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController" message:@"postJson" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    NSLog(@"postJson arg1 is %@ arg2 is %@",arg1,arg2);
+    return %orig;
+}
+
+- (void)unionidHandler:(id)arg1
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController" message:@"unionidHandler" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    NSLog(@"unionidHandler arg1 is %@",arg1);
+    return %orig;
+}
+
+- (void)getMesgUrl:(id)arg1
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController" message:@"getMesgUrl" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    NSLog(@"getMesgUrl arg1 is %@",arg1);
+    return %orig;
+}
+
+- (void)sendPackage
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController" message:@"sendPackage" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    NSLog(@"sendPackage is sendPackage");
+    return %orig;
+}
+
+- (void)postValidateUrl:(id)arg1
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AngelFaceViewController" message:@"postValidateUrl" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    NSLog(@"postValidateUrl arg1 is %@",arg1);
+    return %orig;
+}
+
 %end
 
 /*
@@ -81,6 +129,28 @@
 
 	NSLog(@"UIApplication openURL is %@ call symblo is %@",url.absoluteString,[NSThread callStackSymbols]);
 	return %orig;
+}
+
+%end
+
+%hook AFURLSessionManager
+
+- (id)init
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AFURLSessionManager" message:@"init" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    return %orig;
+}
+
+%end
+
+%hook AFHTTPRequestSerializer
+
+- (id)init
+{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"AFHTTPRequestSerializer" message:@"init" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    return %orig;
 }
 
 %end
